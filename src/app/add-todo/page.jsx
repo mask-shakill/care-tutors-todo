@@ -1,12 +1,10 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const EditTodoPage = () => {
+const AddTodoPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +19,7 @@ const EditTodoPage = () => {
         className="space-y-4 w-[300px] lg:w-[400px] lg:border-yellow-300 border border-teal-400 py-7 px-3 rounded-2xl"
         onSubmit={handleSubmit}
       >
-        <h1 className="font-bold text-white text-xl">Edit Task</h1>
+        <h1 className="font-bold text-white text-xl">Add Task</h1>
         <div>
           <label className="block text-white">Title</label>
           <input
@@ -43,14 +41,14 @@ const EditTodoPage = () => {
           />
         </div>
         <button
-          onClick={() => router.push("/")}
+          type="submit"
           className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          Update
+          Add
         </button>
       </form>
     </div>
   );
 };
 
-export default EditTodoPage;
+export default AddTodoPage;
