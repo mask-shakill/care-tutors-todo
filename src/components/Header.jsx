@@ -8,7 +8,7 @@ const Header = () => {
       <h1 className="text-white font-bold lg:text-5xl brand-name text-2xl ">
         CareTutors Todo
       </h1>
-      <Link href={"/"}>
+      <Link href={"/add-todo"}>
         <IoMdAddCircle className="lg:text-4xl lg:font-bold lg:text-white text-3xl text-white" />
       </Link>
     </nav>

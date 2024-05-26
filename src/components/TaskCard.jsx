@@ -1,16 +1,21 @@
-import React from "react";
-import { MdDelete, MdEdit } from "react-icons/md";
-const TaskCard = () => {
+"use client";
+
+import Link from "next/link";
+import DeleteTodo from "./DeleteTodo";
+
+const TaskCard = ({ task }) => {
   return (
     <div className="shadow rounded-xl w-full h-[120px] py-1 px-2 text-white shadow-teal-300 lg:shadow-yellow-300 font-serif ">
-      <h1 className="font-bold mt-1 ">Todo 1</h1>
-      <p className="font-sm">
-        description Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Molestias, deleniti.
-      </p>
-      <div className="flex items-center justify-end mt-3 gap-x-2 lg:text-xl text-lg">
-        <MdEdit />
-        <MdDelete className="text-[#ff0000] " />
+      <h2 className="text-xl font-bold">{task.title}</h2>
+      <p className="mt-2">{task.description}</p>
+      <div className="mt-4 flex space-x-2">
+        <Link
+          href={`/edit-todo/${task.id}`}
+          className="py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        >
+          Edit
+        </Link>
+        <DeleteTodo id={task.id} />
       </div>
     </div>
   );

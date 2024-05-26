@@ -1,18 +1,16 @@
-import React from "react";
+"use client";
+
+import { useSelector } from "react-redux";
 import TaskCard from "./TaskCard";
 
 const AllTasks = () => {
+  const tasks = useSelector((state) => state.todos.tasks);
+
   return (
-    <div className="lg:mx-32 mx-4 mt-5 lg:mt-14">
-      <h1 className="text-white border-b inline-block font-bold lg:text-xl ">
-        All Tasks
-      </h1>
-      <div className="mt-3 lg:mt-5 flex flex-col gap-y-5 lg:grid lg:grid-cols-2 gap-5">
-        <TaskCard />
-        <TaskCard />
-        <TaskCard />
-        <TaskCard />
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {tasks.map((task) => (
+        <TaskCard key={task.id} task={task} />
+      ))}
     </div>
   );
 };

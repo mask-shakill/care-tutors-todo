@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Providers from "./redux/providers";
+import LoadTasks from "./redux/LoadTasks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +23,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
-        <Header />
-        {children}
+        <Providers>
+          {" "}
+          <Header />
+          <LoadTasks>{children}</LoadTasks>
+        </Providers>
       </body>
     </html>
   );
