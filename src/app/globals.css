@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: rgb(17, 68, 24);
+  background: linear-gradient(90deg, rgb(13, 34, 57) 0%, rgb(11, 42, 38) 62%);
+}
+
+.brand-name {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
