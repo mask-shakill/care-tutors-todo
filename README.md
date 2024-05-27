@@ -1,6 +1,6 @@
 # CareTutors Todo Project
 
-A Todo list application built with React, Redux Toolkit, Tailwind CSS, and React Icons.
+A Todo list application built with Next.js, Redux Toolkit, Tailwind CSS, Local storage and React Icons.
 
 ## Table of Contents
 
