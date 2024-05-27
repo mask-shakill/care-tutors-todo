@@ -1,10 +1,9 @@
-import AllTasks from "@/components/AllTasks";
 import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <AllTasks />
+      <h1>hello world</h1>
     </div>
   );
 };

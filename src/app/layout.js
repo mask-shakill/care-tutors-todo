@@ -1,8 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Providers from "./redux/providers";
-import LoadTasks from "./redux/LoadTasks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +19,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>
-        <Providers>
-          {" "}
-          <Header />
-          <LoadTasks>{children}</LoadTasks>
-        </Providers>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
