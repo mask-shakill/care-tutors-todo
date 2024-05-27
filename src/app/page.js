@@ -1,11 +1,15 @@
+"use client";
+import TodoList from "@/components/TodoList";
+import store from "@/redux/store";
 import React from "react";
+import { Provider } from "react-redux";
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <div>
-      <h1>hello world</h1>
-    </div>
+    <Provider store={store}>
+      <TodoList />
+    </Provider>
   );
 };
 
-export default Home;
+export default HomePage;
