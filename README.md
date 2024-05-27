@@ -20,7 +20,7 @@ A Todo list application built with React, Redux Toolkit, Tailwind CSS, and React
 **Clone the repository**
 
    ```sh
-   git clone https://github.com/your-username/CareTutors-Todo.git
+   git clone https://github.com/mask-shakill/care-tutors-todo.git
    cd CareTutors-Todo
    npm install
    npm run dev
